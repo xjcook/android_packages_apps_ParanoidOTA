@@ -127,6 +127,8 @@
     <string name="settings">Settings</string>
     <string name="settings_checktime_title">Update check frequency</string>
     <string name="settings_checktime_summary">Specify the time between each update check</string>
+    <string name="settings_checkrom_title">Check for PA rom</string>
+    <string name="settings_checkrom_summary">Check for Paranoid Android official rom</string>
     <string name="settings_checkgapps_title">Check for Google apps</string>
     <string name="settings_checkgapps_summary">Check also for PA specific Google apps</string>
     <string name="settings_gappstype_title">Google apps type</string>

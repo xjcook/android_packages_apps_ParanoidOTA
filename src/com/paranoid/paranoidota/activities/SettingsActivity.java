@@ -52,6 +52,7 @@ public class SettingsActivity extends PreferenceActivity implements
 
     private SettingsHelper mSettingsHelper;
     private ListPreference mCheckTime;
+    private CheckBoxPreference mCheckRom;
     private CheckBoxPreference mCheckGapps;
     private ListPreference mGappsType;
     private Preference mGoo;
@@ -69,11 +70,13 @@ public class SettingsActivity extends PreferenceActivity implements
         addPreferencesFromResource(R.layout.activity_settings);
 
         mCheckTime = (ListPreference) findPreference(SettingsHelper.PROPERTY_CHECK_TIME);
+        mCheckRom = (CheckBoxPreference) findPreference(SettingsHelper.PROPERTY_CHECK_ROM);
         mCheckGapps = (CheckBoxPreference) findPreference(SettingsHelper.PROPERTY_CHECK_GAPPS);
         mGappsType = (ListPreference) findPreference(SettingsHelper.PROPERTY_GAPPS_TYPE);
         mGoo = (Preference) findPreference("goo");
 
         mCheckTime.setValue(String.valueOf(mSettingsHelper.getCheckTime()));
+        mCheckRom.setChecked(mSettingsHelper.getCheckRom());
         mCheckGapps.setChecked(mSettingsHelper.getCheckGapps());
         mGappsType.setValue(String.valueOf(mSettingsHelper.getGappsType()));
 

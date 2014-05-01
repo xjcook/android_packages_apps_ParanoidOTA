@@ -34,6 +34,11 @@
             android:entryValues="@array/time_notifications_values" />
 
         <com.paranoid.paranoidota.widget.CheckBoxPreference
+            android:key="checkrom"
+            android:title="@string/settings_checkrom_title"
+            android:summary="@string/settings_checkrom_summary" />
+
+        <com.paranoid.paranoidota.widget.CheckBoxPreference
             android:key="checkgapps"
             android:title="@string/settings_checkgapps_title"
             android:summary="@string/settings_checkgapps_summary" />

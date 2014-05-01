@@ -31,6 +31,7 @@ public class SettingsHelper {
     public static final int GAPPS_MICRO = 3;
 
     public static final String PROPERTY_CHECK_TIME = "checktime";
+    public static final String PROPERTY_CHECK_ROM = "checkrom";
     public static final String PROPERTY_CHECK_GAPPS = "checkgapps";
     public static final String PROPERTY_GAPPS_TYPE = "gappstype";
     public static final String PROPERTY_LOGIN = "goologin";
@@ -44,6 +45,7 @@ public class SettingsHelper {
     public static final String DOWNLOAD_GAPPS_FILENAME = "download_gapps_filename";
 
     private static final String DEFAULT_CHECK_TIME = "18000000"; // five hours
+    private static final boolean DEFAULT_CHECK_ROM = false;
     private static final boolean DEFAULT_CHECK_GAPPS = true;
 
     private static int DEFAULT_GAPPS_TYPE = GAPPS_FULL;
@@ -57,6 +59,10 @@ public class SettingsHelper {
 
     public long getCheckTime() {
         return Long.parseLong(settings.getString(PROPERTY_CHECK_TIME, DEFAULT_CHECK_TIME));
+    }
+
+    public boolean getCheckRom() {
+        return settings.getBoolean(PROPERTY_CHECK_ROM, DEFAULT_CHECK_ROM);
     }
 
     public boolean getCheckGapps() {
